@@ -9,3 +9,8 @@
 **O que fiz:** Criação dos inimigos (`goma-azul`, `goma-laranja`, `goma-rosa` e `goma-verde`, todos `CharacterBody2D` no grupo `inimigos` com o script `gomas.gd`), que pulam em direção ao jogador, causam dano de contato pela `AreaDano` e atravessam as plataformas *one-way* para descer quando o jogador está abaixo, além da `goma-rei` (`goma_rei.gd`, 6 de vida). Criação do evento de horda no `Portal` (`spawner2.gd` e `start_spawn.gd`): ao entrar na área o jogador vê o aviso "Sobreviva um minuto", os timers rodam por 60 s e pausam se ele sai, o intervalo de spawn acelera de 2 s para 0,4 s com no máximo 12 gomas vivas, e a Goma Rei aparece a partir dos 30 s, a cada 5 s. Sistema de vida do jogador com 5 corações (`health_bar.gd`), estado HURT com invencibilidade de 1,5 s e piscar, e sinal `morreu`. HUD (`hud.tscn` e `hud.gd`) com cronômetro, contador de gomas eliminadas e telas "Você morreu" e "Você venceu!" com botão Reiniciar. Camadas de física: jogador na camada 2 e gomas na camada 3.
 **O que travou:** A goma não dava dano de contato no jogador.
 **Como resolvi:** A solução foi configurar corretamente as mascaras e layers do projeto, sendo elas world (1), jogador (2), inimigos (3) e plataformas (4)
+
+## Aula 10 -- 28/10
+**O que fiz:** Adição dos sprites de portais
+**O que travou:** O timer não startava ao entrar na area
+**Como resolvi:** Corrigi adicionando um script trigger, separado do script de lógica de spawn de inimigos
