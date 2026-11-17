@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bqwvputlyk8py"]
+
+[ext_resource type="Script" uid="uid://cj57krcdi1dfy" path="res://scripts/hud.gd" id="1_nhrkl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mdguc"]
+font_size = 32
+
+[node name="HudTimer" type="Node2D" unique_id=283329846]
+script = ExtResource("1_nhrkl")
+
+[node name="HudTimer" type="CanvasLayer" parent="." unique_id=431092898]
+
+[node name="LabelTimer" type="Label" parent="HudTimer" unique_id=190229821]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_right = -10.0
+offset_bottom = 45.0
+grow_horizontal = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+label_settings = SubResource("LabelSettings_mdguc")
+horizontal_alignment = 2
